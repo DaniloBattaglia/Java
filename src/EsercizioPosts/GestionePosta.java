@@ -5,9 +5,14 @@ public class GestionePosta {
         Posta posta = new Posta();
 
         // Aggiungo persone
-        posta.entraInCoda(new Persona("Marco"));
-        posta.entraInCoda(new Persona("Anna"));
-        posta.entraInCoda(new Persona("Luca"));
+        Persona p1 = new Persona("Marco");
+        Persona p2 = new Persona("Anna");
+        Persona p3 = new Persona("Luca");
+
+        posta.entraInCoda(p1);
+        posta.entraInCoda(p2);
+        posta.entraInCoda(p3);
+
 
         // Mostro la coda
         posta.mostraCoda();
