@@ -1,20 +1,19 @@
-package Esame_java;
+package Esame_java2;
 
-public class Studente {
-	
-	
-	String nome;
-    String cognome;
-    int annoNascita;
+public class Studente extends Persona {
 
-    public Studente(String nome, String cognome, int annoNascita) {
-        this.nome = nome;
-        this.cognome = cognome;
-        this.annoNascita = annoNascita;
-    }
-
-    public void stampaScheda() {
-        System.out.println(nome + " " + cognome + ", nato nel " + annoNascita);
-    }
+	private String matricola;
 	
-    }
+	public Studente(String nome, String cognome, String matricola) {
+		
+		super(nome, cognome);
+		this.matricola = matricola;
+		
+	}
+	
+	@Override
+	public void Presentati() {
+		System.out.println("Sono lo studente " + getNome() + " " + getCognome() + ", matricola: " + matricola);
+	}
+	
+}
